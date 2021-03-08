@@ -6,18 +6,32 @@ I used compound components (just a design pattern) to build my components and th
 
 # File Structure
 .
+
 ├── public
+
 │   ├── images
+
 │   ├── videos
+
 ├── src
+
 │   ├── components
+
 │   │   └── accordion, card, feature, footer, form, header, jumbotron, etc
+
 │   ├── containers
+
+
 │   ├── pages
+
 │   ├── containers
+
 │   ├── pages
+
 │   └── hooks
+
 ├── LICENSE
+
 └── README.md
 
 
