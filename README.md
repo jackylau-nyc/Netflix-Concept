@@ -5,6 +5,7 @@ This application (a Netflix clone) was built using React (Custom Hooks, Context)
 I used compound components (just a design pattern) to build my components and the styling is all handled via styled components. Using compound components made my components easy to test. You can contribute to this project (highly encouraged!).
 
 # File Structure
+```
 .
 
 ├── public
@@ -33,6 +34,6 @@ I used compound components (just a design pattern) to build my components and th
 ├── LICENSE
 
 └── README.md
-
+```
 
 ![Preview](netflix-preview.png?raw=true)
