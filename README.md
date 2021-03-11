@@ -16,8 +16,6 @@ I used compound components (just a design pattern) to build my components and th
 │   │   └── accordion, card, feature, footer, form, header, jumbotron, etc
 │   ├── containers
 │   ├── pages
-│   ├── containers
-│   ├── pages
 │   └── hooks
 ├── LICENSE
 └── README.md
