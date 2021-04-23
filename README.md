@@ -1,4 +1,4 @@
-## Netflix Concept
+## [Netflix Concept](https://netflix-concept-861dc.web.app/)
 
 This application (a Netflix clone) was built using React (Effects, States, Custom Hooks, Context), Firebase, & Styled Components. I have built the following pages within this application: sign in, sign up, browse, & the homepage. There are four different pages, some using protected routes with auth listeners. Firebase firestore handles all the data and that data is retrieved using a custom hook; authentication is used on all pages, which is handled by Firebase as well. We used Fuse.js for live search, React router for navigation, and tested all our components using React Testing Library.
 
