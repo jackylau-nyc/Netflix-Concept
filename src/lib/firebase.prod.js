@@ -1,23 +1,23 @@
-import Firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import Firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+import { seedDatabase } from "../seed";
 
-// 1) when seeding the database you'll have to uncomment this!
-// import { seedDatabase } from '../seed';
+//Seed database
 
+//Config
 const config = {
-  apiKey: '',
-  authDomain: '',
-  databaseURL: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: '',
+  apiKey: "AIzaSyDIxlr8UbOJX5faP715NiuFpe7MErk_PP0",
+  authDomain: "netflix-concept-861dc.firebaseapp.com",
+  projectId: "netflix-concept-861dc",
+  storageBucket: "netflix-concept-861dc.appspot.com",
+  messagingSenderId: "214003365217",
+  appId: "1:214003365217:web:efc8cc1c43808960df4120",
 };
 
 const firebase = Firebase.initializeApp(config);
-// 2) when seeding the database you'll have to uncomment this!
-// seedDatabase(firebase);
-// 3) once you have populated the database (only run once!), re-comment this so you don't get duplicate data
+
+//ONLY RUN THIS ONCE (by saving or refreshing your localhost)
+//seedDatabase(firebase);
 
 export { firebase };

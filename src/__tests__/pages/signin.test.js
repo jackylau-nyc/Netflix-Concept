@@ -1,23 +1,25 @@
-import React from 'react';
-import { render, fireEvent } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
-import { SignIn } from '../../pages';
-import { FirebaseContext } from '../../context/firebase';
+import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { BrowserRouter as Router } from "react-router-dom";
+import { act } from "react-dom/test-utils";
+import { SignIn } from "../../pages";
+import { FirebaseContext } from "../../context/firebase";
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
   useHistory: () => ({}),
 }));
 
 const firebase = {
   auth: jest.fn(() => ({
-    signInWithEmailAndPassword: jest.fn(() => Promise.resolve('I am signed in!')),
+    signInWithEmailAndPassword: jest.fn(() =>
+      Promise.resolve("I am signed in!")
+    ),
   })),
 };
 
-describe('<SignIn />', () => {
-  it('renders the sign in page with a form submission', async () => {
+describe("<SignIn />", () => {
+  it("renders the sign in page with a form submission", async () => {
     const { getByTestId, getByPlaceholderText, queryByTestId } = render(
       <Router>
         <FirebaseContext.Provider value={{ firebase }}>
@@ -27,13 +29,19 @@ describe('<SignIn />', () => {
     );
 
     await act(async () => {
-      await fireEvent.change(getByPlaceholderText('Email address'), { target: { value: 'karl@gmail.com' } });
-      await fireEvent.change(getByPlaceholderText('Password'), { target: { value: 'password' } });
-      fireEvent.click(getByTestId('sign-in'));
+      await fireEvent.change(getByPlaceholderText("Email address"), {
+        target: { value: "six1s@gmail.com" },
+      });
+      await fireEvent.change(getByPlaceholderText("Password"), {
+        target: { value: "111111" },
+      });
+      fireEvent.click(getByTestId("sign-in"));
 
-      expect(getByPlaceholderText('Email address').value).toBe('karl@gmail.com');
-      expect(getByPlaceholderText('Password').value).toBe('password');
-      expect(queryByTestId('error')).toBeFalsy();
+      expect(getByPlaceholderText("Email address").value).toBe(
+        "six1s@gmail.com"
+      );
+      expect(getByPlaceholderText("Password").value).toBe("111111");
+      expect(queryByTestId("error")).toBeFalsy();
     });
   });
 });
